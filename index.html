@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <style>
+        /* --- الأساسيات والمظهر العام --- */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffd1dc 100%);
+            color: #d81b60;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* --- قسم الترحيب (الهيدر) --- */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-in;
+            font-family: 'Georgia', serif;
+            z-index: 10;
+        }
+
+        .heart {
+            color: #ff4081;
+            font-size: 60px;
+            animation: pulse 1.2s infinite;
+            z-index: 10;
+        }
+
+        /* تزيين عائم (بالونات/قلوب خلفية) */
+        .decor {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.3;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        /* --- الأقسام الرئيسية --- */
+        .container {
+            padding: 60px 20px;
+        }
+
+        /* صندوق الرسالة */
+        .message-box {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(216, 27, 96, 0.1);
+            max-width: 650px;
+            margin: 0 auto 50px auto; /* هام لترك مسافة */
+            line-height: 1.6;
+            backdrop-filter: blur(5px);
+        }
+
+        /* --- قسم معرض الصور --- */
+        .photo-gallery {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .photo-card:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 250px; /* تحديد الارتفاع لتوحيد حجم الصور */
+            object-fit: cover; /* لضمان ملء الصورة للإطار بشكل جميل */
+            border-radius: 10px;
+        }
+
+        .photo-caption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            font-style: italic;
+            color: #ad1457;
+        }
+
+        /* --- الحركات (Animations) --- */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .emojis {
+            font-size: 45px;
+            margin: 25px 0;
+            z-index: 10;
+        }
+
+        /* --- التذييل (الفوتر) --- */
+        footer {
+            padding: 60px 40px;
+            font-style: italic;
+            opacity: 0.8;
+            background: linear-gradient(to top, rgba(255,255,255,0.5), transparent);
+        }
+
+        /* استجابة للهواتف */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .message-box { padding: 25px; }
+            .photo-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="decor" style="top: 10%; left: 10%; animation-delay: 0s;">💖</div>
+        <div class="decor" style="top: 20%; right: 15%; animation-delay: 2s;">🎈</div>
+        <div class="decor" style="bottom: 15%; left: 20%; animation-delay: 4s;">✨</div>
+
+        <div class="heart">❤️</div>
+        <h1>Happy Birthday, My Love</h1>
+        <p style="font-size: 1.4rem; color: #ad1457; z-index: 10;">Today is the most beautiful day because of you!</p>
+        <div class="emojis">🎂 ✨ 🎁 💖</div>
+    </header>
+
+    <div class="container">
+        <div class="message-box">
+            <h2 style="font-size: 2rem; margin-top: 0;">To My Everything...</h2>
+            <p style="font-size: 1.2rem;">
+                On this special day, I just wanted to let you know how much you mean to me. 
+                You aren't just my partner; you are my entire world and my greatest joy.
+            </p>
+            <p style="font-size: 1.2rem;">
+                May your year be as bright and beautiful as your smile. 
+                Thank you for being you.
+            </p>
+            <p style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0;">Forever Yours. ❤️</p>
+        </div>
+
+        <h2 style="font-size: 2.5rem; font-family: 'Georgia', serif; margin-bottom: 30px;">Our Precious Memories</h2>
+        
+        <div class="photo-gallery">
+            <div class="photo-card">
+                <img src="ضع_رابط_الصورة_الأولى.jpg" alt="A beautiful memory">
+                <p class="photo-caption">Our first trip together ❤️</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="ضع_رابط_الصورة_الثانية.jpg" alt="A beautiful memory">
+                <p class="photo-caption">That amazing dinner 🥂</p>
+            </div>
+
+            <div class="photo-card">
+                <img src="ضع_رابط_الصورة_الثالثة.jpg" alt="A beautiful memory">
+                <p class="photo-caption">Just being us 🥰</p>
+            </div>
+
+            </div>
+    </div>
+
+    <footer>
+        Made with love just for you
+    </footer>
+
+</body>
+</html>
